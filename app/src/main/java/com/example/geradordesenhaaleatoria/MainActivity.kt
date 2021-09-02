@@ -3,10 +3,8 @@ package com.example.geradordesenhaaleatoria
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
-import android.widget.TextView
-
+import kotlinx.android.synthetic.main.activity_main.txtFrase
+import java.util.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -16,8 +14,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun cliqueBotao(view: View) {
-        var texto = findViewById(R.id.txtFrase) as TextView
-        val caracteres = "ABCDEFGHIJKLMNOPQRSTUVYWXZ!@#$%&*_-+=1234567890"
+        val caracteres = "ABCDEFGHIJKLMNOPQRSTUVYWXZ!@#$%&*_-+=1234567890abcdefghijklmnopqrstuvywxz"
         val random = Random()
 
         var senhaGerada = ""
